@@ -504,15 +504,17 @@ const BOOKS = [
     'Bk01_1_06_Daily_Log_Monthly_Log.png',
     'Bk01_1_07_Intentional_Living.png',
     'Bk01_2_01_Hook.png',
-    'Bk01_2_02_Quote_1.png',
-    'Bk01_2_03_Quote_2.png',
-    'Bk01_2_04_Quote_3.png',
+    'Bk01_2_02_Quote_01.png',
+    'Bk01_2_03_Quote_02.png',
+    'Bk01_2_04_Quote_03.png',
+    'Bk01_2_05_Quote_04.png',
+    'Bk01_2_06_Quote_05.png',
     'Bk01_3_01_Intro.png',
-    'Bk01_3_02_Lesson_1.png',
-    'Bk01_3_03_Lesson_2.png',
-    'Bk01_3_04_Lesson_3.png',
-    'Bk01_3_05_Lesson_4.png',
-    'SlideFollow.png',
+    'Bk01_3_02_Lesson_01.png',
+    'Bk01_3_03_Lesson_02.png',
+    'Bk01_3_04_Lesson_03.png',
+    'Bk01_3_05_Lesson_04.png',
+    'Bk01_3_06_Follow.png',
   ],
   [
     'Bk02_1_01_Cover.png',
@@ -524,15 +526,15 @@ const BOOKS = [
     'Bk02_1_07_Embrace_Income_Variance.png',
     'Bk02_1_08_Reputation_as_Network.png',
     'Bk02_2_01_Hook.png',
-    'Bk02_2_02_Quote_1.png',
-    'Bk02_2_03_Quote_2.png',
-    'Bk02_2_04_Quote_3.png',
+    'Bk02_2_02_Quote_01.png',
+    'Bk02_2_03_Quote_02.png',
+    'Bk02_2_04_Quote_03.png',
     'Bk02_3_01_Intro.png',
-    'Bk02_3_02_Lesson_1.png',
-    'Bk02_3_03_Lesson_2.png',
-    'Bk02_3_04_Lesson_3.png',
-    'Bk02_3_05_Lesson_4.png',
-    'SlideFollow.png',
+    'Bk02_3_02_Lesson_01.png',
+    'Bk02_3_03_Lesson_02.png',
+    'Bk02_3_04_Lesson_03.png',
+    'Bk02_3_05_Lesson_04.png',
+    'Bk02_3_06_Follow.png',
   ],
   [
     'Bk03_1_01_Cover.png',
@@ -543,10 +545,10 @@ const BOOKS = [
     'Bk03_1_06_Hatred_Is_a_Curved_Blade.png',
     'Bk03_1_07_Love_Does_Not_End_With_Death.png',
     'Bk03_2_01_Hook.png',
-    'Bk03_2_02_Quote_1.png',
-    'Bk03_2_03_Quote_2.png',
-    'Bk03_2_04_Quote_3.png',
-    'Bk03_2_05_Quote_4.png',
+    'Bk03_2_02_Quote_01.png',
+    'Bk03_2_03_Quote_02.png',
+    'Bk03_2_04_Quote_03.png',
+    'Bk03_2_05_Quote_04.png',
     'Bk03_2_06_Quote_05.png',
     'Bk03_3_01_Intro.png',
     'Bk03_3_02_Your_Existence_Matters.png',
@@ -554,12 +556,11 @@ const BOOKS = [
     'Bk03_3_04_Suffering_Is_a_Chapter.png',
     'Bk03_3_05_Sacrifice_Is_Love_in_Another_Form.png',
     'Bk03_3_06_Those_We_Have_Loved_Never_Truly_Leave_Us.png',
-    'SlideFollow.png',
+    'Bk03_3_07_Follow.png',
   ],
 ];
 
 const IMG_BASE = 'slides/';
-const FOLLOW_IMG = 'SlideFollow.png';
 
 let currentBook = 0;
 let currentSlide = 0;
@@ -584,10 +585,7 @@ function handleLbClick(e) {
 function showSlide() {
   const slides = BOOKS[currentBook];
   const img = document.getElementById('slide-img');
-  const src = slides[currentSlide] === 'SlideFollow.png'
-    ? FOLLOW_IMG
-    : IMG_BASE + slides[currentSlide];
-  img.src = src;
+  img.src = IMG_BASE + slides[currentSlide];
   img.alt = slides[currentSlide];
   document.getElementById('lb-counter').textContent =
     (currentSlide + 1) + ' / ' + slides.length;
