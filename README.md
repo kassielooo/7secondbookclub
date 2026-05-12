@@ -12,7 +12,6 @@ A personal reading notes site. Books I've read, ideas I don't want to forget —
 7secondbookclub/
 ├── index.html        ← the whole website (single file)
 ├── logo.png          ← site logo
-├── SlideFollow.png   ← shared follow slide shown at end of each book
 └── slides/           ← all book slide images (PNG)
     ├── Bk01_...
     ├── Bk02_...
