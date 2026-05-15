@@ -5,25 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>七秒讀書會 · 7 Second Book Club</title>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  :root {
-    --cream: #F5EFE0;
-    --ink: #1A1F3A;
-    --cobalt: #1F3FBA;
-    --sans: 'Space Grotesk', system-ui, sans-serif;
-    --tc: 'Noto Sans TC', sans-serif;
-  }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    background: var(--cream);
-    color: var(--ink);
-    font-family: var(--sans);
-    min-height: 100vh;
-  }
 
   /* ── HEADER ── */
   header {
@@ -393,6 +376,18 @@
 </head>
 <body>
 
+<!-- ── NAV ── -->
+<nav class="site-nav">
+  <a class="nav-logo" href="index.html">
+    <img src="logo.png" alt="七秒讀書會">
+    <span class="nav-logo-name">七秒讀書會</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">閱讀筆記</a></li>
+    <li><a href="about/index.html">關於</a></li>
+  </ul>
+</nav>
+
 <!-- ── HEADER ── -->
 <header>
   <img class="logo" src="logo.png" alt="七秒讀書會">
@@ -400,22 +395,6 @@
   <div class="site-name-en">7 Second Book Club</div>
   <div class="tagline">Short Memory, Long Books.</div>
 </header>
-
-<div class="divider"><div class="divider-line"></div><div class="divider-dot"></div><div class="divider-line"></div></div>
-
-<!-- ── INTRO ── -->
-<section class="intro">
-  <div class="intro-zh">
-    <p>逃避 AI 內容亂舞的時代，重投書本懷抱。</p>
-    <p>讀完一本書，過幾個月，大概只記得「好像還不錯」。<br>腦袋儲存空間有限，舊檔案不自覺地被刪除。</p>
-    <p>每次都重讀太費時，<br>於是開始整理筆記——日花七秒重溫書中黃金。</p>
-  </div>
-  <div class="intro-en">
-    <p>Escaping the age of AI-generated noise, and returning to books.</p>
-    <p>A few months after finishing a book, all I remember is "that was pretty good." The brain has limited storage — old files quietly disappear.</p>
-    <p>Re-reading takes too long, so I started keeping notes.<br>The gold is already in the book. Seven seconds to find it again.</p>
-  </div>
-</section>
 
 <div class="divider"><div class="divider-line"></div><div class="divider-dot"></div><div class="divider-line"></div></div>
 
@@ -429,7 +408,7 @@
 
     <div class="book-card" onclick="openBook(0)">
       <div class="book-cover-wrap">
-        <img src="slides/Bk01_1_01_Cover.png" alt="子彈思考整理術">
+        <img src="slides/book01/Bk01_0_CoverOnly.png" alt="子彈思考整理術">
       </div>
       <div class="book-title-zh">子彈思考整理術</div>
       <div class="book-subtitle-en">The Bullet Journal Method</div>
@@ -438,7 +417,7 @@
 
     <div class="book-card" onclick="openBook(1)">
       <div class="book-cover-wrap">
-        <img src="slides/Bk02_1_01_Cover.png" alt="離開公司，我過得還不錯">
+        <img src="slides/book02/Bk02_0_CoverOnly.png" alt="離開公司，我過得還不錯">
       </div>
       <div class="book-title-zh">離開公司，我過得還不錯</div>
       <div class="book-subtitle">劉揚銘 · 2019</div>
@@ -446,7 +425,7 @@
 
     <div class="book-card" onclick="openBook(2)">
       <div class="book-cover-wrap">
-        <img src="slides/Bk03_1_01_Cover.png" alt="在天堂遇見的五個人">
+        <img src="slides/book03/Bk03_0_CoverOnly.png" alt="在天堂遇見的五個人">
       </div>
       <div class="book-title-zh">在天堂遇見的五個人</div>
       <div class="book-subtitle-en">The Five People You Meet in Heaven</div>
@@ -455,7 +434,7 @@
 
     <div class="book-card" onclick="openBook(3)">
       <div class="book-cover-wrap">
-        <img src="slides/Bk04_1_01_Cover.png" alt="活著">
+        <img src="slides/book04/Bk04_0_CoverOnly.png" alt="活著">
       </div>
       <div class="book-title-zh">活著</div>
       <div class="book-subtitle">余華 · 1993</div>
@@ -463,7 +442,7 @@
 
     <div class="book-card" onclick="openBook(4)">
       <div class="book-cover-wrap">
-        <img src="slides/Bk05_1_01_Cover.png" alt="成不了大人物的我們，決定成為簡單的人">
+        <img src="slides/book05/Bk05_0_CoverOnly.png" alt="成不了大人物的我們，決定成為簡單的人">
       </div>
       <div class="book-title-zh">成不了大人物的我們，決定成為簡單的人</div>
       <div class="book-subtitle">何俺 · 2024</div>
@@ -473,15 +452,8 @@
 </section>
 
 <!-- ── FOOTER ── -->
-<footer>
-  <a class="ig-link" href="https://www.instagram.com/7secondbookclub" target="_blank" rel="noopener">
-    <svg class="ig-icon" viewBox="0 0 24 24" aria-label="Instagram">
-      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-      <circle cx="12" cy="12" r="4"/>
-      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
-    </svg>
-    @7secondbookclub
-  </a>
+<footer class="site-footer">
+  © 2026 7 Second Book Club
 </footer>
 
 <!-- ── LIGHTBOX ── -->
@@ -513,114 +485,122 @@ const BOOK_NAMES = [
 ];
 
 const BOOKS = [
-  [
-    'Bk01_1_01_Cover.png',
-    'Bk01_1_02_Summary.png',
-    'Bk01_1_03_Rapid_Logging.png',
-    'Bk01_1_04_Migration.png',
-    'Bk01_1_05_Collections.png',
-    'Bk01_1_06_Daily_Log_Monthly_Log.png',
-    'Bk01_1_07_Intentional_Living.png',
-    'Bk01_2_01_Hook.png',
-    'Bk01_2_02_Quote_01.png',
-    'Bk01_2_03_Quote_02.png',
-    'Bk01_2_04_Quote_03.png',
-    'Bk01_2_05_Quote_04.png',
-    'Bk01_2_06_Quote_05.png',
-    'Bk01_3_01_Intro.png',
-    'Bk01_3_02_Lesson_01.png',
-    'Bk01_3_03_Lesson_02.png',
-    'Bk01_3_04_Lesson_03.png',
-    'Bk01_3_05_Lesson_04.png',
-    'SlideFollow.png',
-  ],
-  [
-    'Bk02_1_01_Cover.png',
-    'Bk02_1_02_Summary.png',
-    'Bk02_1_03_Two_of_Three_Skills.png',
-    'Bk02_1_04_Freedom_of_Refusal.png',
-    'Bk02_1_05_Autonomy_over_Stability.png',
-    'Bk02_1_06_Track_Work_Daily.png',
-    'Bk02_1_07_Embrace_Income_Variance.png',
-    'Bk02_1_08_Reputation_as_Network.png',
-    'Bk02_2_01_Hook.png',
-    'Bk02_2_02_Quote_01.png',
-    'Bk02_2_03_Quote_02.png',
-    'Bk02_2_04_Quote_03.png',
-    'Bk02_3_01_Intro.png',
-    'Bk02_3_02_Lesson_01.png',
-    'Bk02_3_03_Lesson_02.png',
-    'Bk02_3_04_Lesson_03.png',
-    'Bk02_3_05_Lesson_04.png',
-    'SlideFollow.png',
-  ],
-  [
-    'Bk03_1_01_Cover.png',
-    'Bk03_1_02_Summary.png',
-    'Bk03_1_03_Every_Life_Is_Connected.png',
-    'Bk03_1_04_Suffering_Is_Never_Without_Purpose.png',
-    'Bk03_1_05_Sacrifice_Is_a_Gift.png',
-    'Bk03_1_06_Hatred_Is_a_Curved_Blade.png',
-    'Bk03_1_07_Love_Does_Not_End_With_Death.png',
-    'Bk03_2_01_Hook.png',
-    'Bk03_2_02_Quote_01.png',
-    'Bk03_2_03_Quote_02.png',
-    'Bk03_2_04_Quote_03.png',
-    'Bk03_2_05_Quote_04.png',
-    'Bk03_2_06_Quote_05.png',
-    'Bk03_3_01_Intro.png',
-    'Bk03_3_02_Your_Existence_Matters.png',
-    'Bk03_3_03_Resentment_Only_Imprisons_You.png',
-    'Bk03_3_04_Suffering_Is_a_Chapter.png',
-    'Bk03_3_05_Sacrifice_Is_Love_in_Another_Form.png',
-    'Bk03_3_06_Those_We_Have_Loved_Never_Truly_Leave_Us.png',
-    'SlideFollow.png',
-  ],
-  [
-    'Bk04_1_01_Cover.png',
-    'Bk04_1_02_Summary.png',
-    'Bk04_1_03_Concept.png',
-    'Bk04_1_04_Concept.png',
-    'Bk04_1_05_Concept.png',
-    'Bk04_1_06_Concept.png',
-    'Bk04_1_07_Concept.png',
-    'Bk04_2_01_Hook.png',
-    'Bk04_2_02_Quote_01.png',
-    'Bk04_2_03_Quote_02.png',
-    'Bk04_2_04_Quote_03.png',
-    'Bk04_2_05_Quote_04.png',
-    'Bk04_3_01_Intro.png',
-    'Bk04_3_02_Takeaway_01.png',
-    'Bk04_3_03_Takeaway_02.png',
-    'Bk04_3_04_Takeaway_03.png',
-    'Bk04_3_05_Takeaway_04.png',
-    'Bk04_3_06_Takeaway_05.png',
-    'SlideFollow.png',
-  ],
-  [
-    'Bk05_1_01_Cover.png',
-    'Bk05_1_02_Summary.png',
-    'Bk05_1_03_Concept.png',
-    'Bk05_1_04_Concept.png',
-    'Bk05_1_05_Concept.png',
-    'Bk05_1_06_Concept.png',
-    'Bk05_1_07_Concept.png',
-    'Bk05_1_08_Concept.png',
-    'Bk05_2_01_Hook.png',
-    'Bk05_2_02_Quote_01.png',
-    'Bk05_2_03_Quote_02.png',
-    'Bk05_2_04_Quote_03.png',
-    'Bk05_2_05_Quote_04.png',
-    'Bk05_3_01_Intro.png',
-    'Bk05_3_02_Lesson_01.png',
-    'Bk05_3_03_Lesson_02.png',
-    'Bk05_3_04_Lesson_03.png',
-    'Bk05_3_05_Lesson_04.png',
-    'SlideFollow.png',
-  ],
+  {
+    base: 'slides/book01/',
+    slides: [
+      'Bk01_0_CoverOnly.png',
+      'Bk01_1_02_Summary.png',
+      'Bk01_1_03_Rapid_Logging.png',
+      'Bk01_1_04_Migration.png',
+      'Bk01_1_05_Collections.png',
+      'Bk01_1_06_Daily_Log_Monthly_Log.png',
+      'Bk01_1_07_Intentional_Living.png',
+      'Bk01_2_01_Hook.png',
+      'Bk01_2_02_Quote_01.png',
+      'Bk01_2_03_Quote_02.png',
+      'Bk01_2_04_Quote_03.png',
+      'Bk01_2_05_Quote_04.png',
+      'Bk01_2_06_Quote_05.png',
+      'Bk01_3_01_Intro.png',
+      'Bk01_3_02_Lesson_01.png',
+      'Bk01_3_03_Lesson_02.png',
+      'Bk01_3_04_Lesson_03.png',
+      'Bk01_3_05_Lesson_04.png',
+    ],
+  },
+  {
+    base: 'slides/book02/',
+    slides: [
+      'Bk02_0_CoverOnly.png',
+      'Bk02_1_02_Summary.png',
+      'Bk02_1_03_Two_of_Three_Skills.png',
+      'Bk02_1_04_Freedom_of_Refusal.png',
+      'Bk02_1_05_Autonomy_over_Stability.png',
+      'Bk02_1_06_Track_Work_Daily.png',
+      'Bk02_1_07_Embrace_Income_Variance.png',
+      'Bk02_1_08_Reputation_as_Network.png',
+      'Bk02_2_01_Hook.png',
+      'Bk02_2_02_Quote_01.png',
+      'Bk02_2_03_Quote_02.png',
+      'Bk02_2_04_Quote_03.png',
+      'Bk02_3_01_Intro.png',
+      'Bk02_3_02_Lesson_01.png',
+      'Bk02_3_03_Lesson_02.png',
+      'Bk02_3_04_Lesson_03.png',
+      'Bk02_3_05_Lesson_04.png',
+    ],
+  },
+  {
+    base: 'slides/book03/',
+    slides: [
+      'Bk03_0_CoverOnly.png',
+      'Bk03_1_02_Summary.png',
+      'Bk03_1_03_Every_Life_Is_Connected.png',
+      'Bk03_1_04_Suffering_Is_Never_Without_Purpose.png',
+      'Bk03_1_05_Sacrifice_Is_a_Gift.png',
+      'Bk03_1_06_Hatred_Is_a_Curved_Blade.png',
+      'Bk03_1_07_Love_Does_Not_End_With_Death.png',
+      'Bk03_2_01_Hook.png',
+      'Bk03_2_02_Quote_01.png',
+      'Bk03_2_03_Quote_02.png',
+      'Bk03_2_04_Quote_03.png',
+      'Bk03_2_05_Quote_04.png',
+      'Bk03_2_06_Quote_05.png',
+      'Bk03_3_01_Intro.png',
+      'Bk03_3_02_Your_Existence_Matters.png',
+      'Bk03_3_03_Resentment_Only_Imprisons_You.png',
+      'Bk03_3_04_Suffering_Is_a_Chapter.png',
+      'Bk03_3_05_Sacrifice_Is_Love_in_Another_Form.png',
+      'Bk03_3_06_Those_We_Have_Loved_Never_Truly_Leave_Us.png',
+    ],
+  },
+  {
+    base: 'slides/book04/',
+    slides: [
+      'Bk04_0_CoverOnly.png',
+      'Bk04_1_02_Summary.png',
+      'Bk04_1_03_Concept.png',
+      'Bk04_1_04_Concept.png',
+      'Bk04_1_05_Concept.png',
+      'Bk04_1_06_Concept.png',
+      'Bk04_1_07_Concept.png',
+      'Bk04_2_01_Hook.png',
+      'Bk04_2_02_Quote_01.png',
+      'Bk04_2_03_Quote_02.png',
+      'Bk04_2_04_Quote_03.png',
+      'Bk04_2_05_Quote_04.png',
+      'Bk04_3_01_Intro.png',
+      'Bk04_3_02_Takeaway_01.png',
+      'Bk04_3_03_Takeaway_02.png',
+      'Bk04_3_04_Takeaway_03.png',
+      'Bk04_3_05_Takeaway_04.png',
+      'Bk04_3_06_Takeaway_05.png',
+    ],
+  },
+  {
+    base: 'slides/book05/',
+    slides: [
+      'Bk05_0_CoverOnly.png',
+      'Bk05_1_02_Summary.png',
+      'Bk05_1_03_Concept.png',
+      'Bk05_1_04_Concept.png',
+      'Bk05_1_05_Concept.png',
+      'Bk05_1_06_Concept.png',
+      'Bk05_1_07_Concept.png',
+      'Bk05_1_08_Concept.png',
+      'Bk05_2_01_Hook.png',
+      'Bk05_2_02_Quote_01.png',
+      'Bk05_2_03_Quote_02.png',
+      'Bk05_2_04_Quote_03.png',
+      'Bk05_2_05_Quote_04.png',
+      'Bk05_3_01_Intro.png',
+      'Bk05_3_02_Lesson_01.png',
+      'Bk05_3_03_Lesson_02.png',
+      'Bk05_3_04_Lesson_03.png',
+      'Bk05_3_05_Lesson_04.png',
+    ],
+  },
 ];
-
-const IMG_BASE = 'slides/';
 
 let currentBook = 0;
 let currentSlide = 0;
@@ -642,13 +622,25 @@ function handleLbClick(e) {
   if (e.target === document.getElementById('lightbox')) closeLb();
 }
 
+function getSlideUrl(bookIdx, slideIdx) {
+  const book = BOOKS[bookIdx];
+  const allSlides = [...book.slides, 'SlideFollow.png'];
+  const filename = allSlides[slideIdx];
+  if (filename === 'SlideFollow.png') return 'slides/SlideFollow.png';
+  return book.base + filename;
+}
+
+function getTotalSlides(bookIdx) {
+  return BOOKS[bookIdx].slides.length + 1; // +1 for SlideFollow
+}
+
 function showSlide() {
-  const slides = BOOKS[currentBook];
+  const total = getTotalSlides(currentBook);
   const img = document.getElementById('slide-img');
-  img.src = IMG_BASE + slides[currentSlide];
-  img.alt = slides[currentSlide];
+  img.src = getSlideUrl(currentBook, currentSlide);
+  img.alt = img.src;
   document.getElementById('lb-counter').textContent =
-    (currentSlide + 1) + ' / ' + slides.length;
+    (currentSlide + 1) + ' / ' + total;
 
   const prevIdx = (currentBook - 1 + BOOKS.length) % BOOKS.length;
   const nextIdx = (currentBook + 1) % BOOKS.length;
@@ -658,15 +650,15 @@ function showSlide() {
 
 function prevSlide(e) {
   e.stopPropagation();
-  const slides = BOOKS[currentBook];
-  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+  const total = getTotalSlides(currentBook);
+  currentSlide = (currentSlide - 1 + total) % total;
   showSlide();
 }
 
 function nextSlide(e) {
   e.stopPropagation();
-  const slides = BOOKS[currentBook];
-  currentSlide = (currentSlide + 1) % slides.length;
+  const total = getTotalSlides(currentBook);
+  currentSlide = (currentSlide + 1) % total;
   showSlide();
 }
 
